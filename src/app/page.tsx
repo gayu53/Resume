@@ -1,11 +1,12 @@
-import HomeLayout from "./components/home/HomeLayout";
 import React from "react";
+import Resume from "./components/home/Resume";
 
 export default function Home() {
   return (
   <>
   <div>
-  <HomeLayout/>
+      <Resume />
+  
   </div>
   </>
   );

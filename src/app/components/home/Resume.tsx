@@ -177,7 +177,11 @@ const Resume: React.FC = () => {
 
   const PrintButton: React.FC = () => (
     <button
-      onClick={() => window.print()}
+      onClick={() =>{
+        if (typeof window !== 'undefined') {
+          window.print();
+        }
+      }}
       className="group fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-in-out print:hidden z-50 font-medium text-sm flex items-center gap-2 border border-blue-500/20"
       style={{
         background: 'linear-gradient(135deg, #3b82f6 0%, #6366f1 100%)'
@@ -213,7 +217,7 @@ const Resume: React.FC = () => {
      style={{ fontFamily: 'Verdana'}}
     >
       <div className="max-w-4xl shadow-lg border border-gray-200 mx-auto bg-white print:shadow-none print:border-none">
-        <div className=" sm:p-6 lg:p-10">
+        <div className="p-5 sm:p-6 lg:p-10">
           {/* Header */}
           <header
           //  style={{ fontFamily: 'Verdana', }}
@@ -267,7 +271,7 @@ const Resume: React.FC = () => {
 
           {/* Skills */}
           <Section title="Skills">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-2">
               {skills.map((skill, index) => (
                 <div key={index} className="mb-2">
                   <span className="font-semibold text-slate-800">{skill.category}</span>{' '}

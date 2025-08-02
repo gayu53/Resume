@@ -5,7 +5,6 @@ import Resume from './Resume';
 function HomeLayout() {
   return (
     <div>
-      <Resume />
     </div>
   );
 }
