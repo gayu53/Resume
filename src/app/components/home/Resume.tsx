@@ -43,8 +43,8 @@ const Resume: React.FC = () => {
 
   const skills: Skill[] = [
     {
-      category: "Frontend:",
-      technologies: "React.js, Next.js, JavaScript (ES6+), TypeScript (Basics), HTML5, CSS3, Sass, Tailwind CSS, Bootstrap"
+      category: "Frontend Technologies:",
+      technologies: "React.js, Next.js, JavaScript (ES6+), TypeScript, HTML5, CSS3, Sass, Tailwind CSS, Bootstrap"
     },
     {
       category: "State Management:",
@@ -55,7 +55,7 @@ const Resume: React.FC = () => {
       technologies: "Framer Motion, GSAP, React Three Fiber (R3F)"
     },
     {
-      category: "Backend:",
+      category: "Backend Technologies:",
       technologies: "Node.js, Express.js, MongoDB, REST APIs, Mongoose"
     },
     {
@@ -71,8 +71,8 @@ const Resume: React.FC = () => {
   const workExperience: WorkExperience[] = [
     {
       title: "Senior Software Engineer",
-      company: "Cloudevel Innovation Pvt. Ltd.",
-      duration: "09/2023 - Current",
+      company: "Cloudrevel Innovation Pvt. Ltd.",
+      duration: "09/2023 - Present",
       responsibilities: [
         "Developed and maintained web applications using React.js and Next.js, ensuring high responsiveness and performance.",
         "Integrated RESTful APIs for dynamic data rendering and real-time state management.",
@@ -126,9 +126,9 @@ const Resume: React.FC = () => {
       ]
     },
     {
-      title: "Cloudgate, SwiftRevel, I Code Technologies, Rugr – Fintech Platforms",
+      title: "Cloudgate, SwiftRevel, LCode Technologies, Rugr – Fintech Platforms",
       description: [
-        "Worked on fintech-focused projects including Cloudgate, SwiftRevel, I Code Technologies, and Rugr — each aiming to enhance digital finance accessibility and infrastructure.",
+        "Worked on fintech-focused projects including Cloudgate, SwiftRevel, LCode Technologies, and Rugr — each aiming to enhance digital finance accessibility and infrastructure.",
         "Developed fully responsive user interfaces using Next.js, React.js, Bootstrap, Tailwind CSS, GSAP, Framer Motion, and npm packages.",
         "Integrated RESTful APIs for real-time data exchange across core modules like payments, banking, DNS services, payroll, and user onboarding.",
         "Implemented interactive animations and transitions using GSAP and Framer Motion to enhance visual feedback and user experience in complex financial dashboards.",
@@ -146,11 +146,11 @@ const Resume: React.FC = () => {
       ]
     },
     {
-      title: "SupportHub, MyHinex, Project Management, MyHub, MyRecruit – Internal Enterprise Platforms",
+      title: "SupportHub, MyHinez, Project Management, MyHub, MyRecruit – Internal Enterprise Platforms",
       description: [
-        "Contributed to internal enterprise products such as SupportHub (ticketing system), MyHinex (HRMS), Project Management tool, and MyHub (Asset Management System).",
+        "Contributed to internal enterprise products such as SupportHub (ticketing system), MyHinez (HRMS), Project Management tool, and MyHub (Asset Management System).",
         "SupportHub: Built a ticketing system with dashboard views and role-based access control for efficient customer query handling.",
-        "MyHinex: Designed secure modules for employee data, payroll, attendance, leave tracking, and performance reviews.",
+        "MyHinez: Designed secure modules for employee data, payroll, attendance, leave tracking, and performance reviews.",
         "Project Management Tool: Developed real-time task tracking, deadline reminders, and team productivity features.",
         "MyHub: Implemented responsive tracking and reporting components for managing the entire asset lifecycle.",
         "MyRecruit - Allows recruiters to create and manage job postings, track candidate applications, and streamline communication across teams.",
@@ -162,8 +162,7 @@ const Resume: React.FC = () => {
   const Section: React.FC<{ 
     title: string; 
     children: React.ReactNode; 
-    isLast?: boolean;
-  }> = ({ title, children, isLast = false }) => (
+  }> = ({ title, children, }) => (
     <div className="mb-6 lg:mb-8">
       <p
       style={{ fontFamily: 'Verdana', color: '#002147' }}
@@ -320,7 +319,7 @@ const Resume: React.FC = () => {
           </Section>
 
           {/* Projects */}
-          <Section title="Projects" isLast={true}>
+          <Section title="Projects">
             <div className="space-y-4 lg:space-y-6">
               {projects.map((project, index) => (
                 <div key={index}>

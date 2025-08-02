@@ -15,6 +15,10 @@ export default [
     rules: {
       "no-console": ["error", { "allow": ["warn", "error"] }],
       "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+      "extends": ["next/core-web-vitals"],
+      "react/react-in-jsx-scope": "off", // Next.js handles React import
     }
+    
+    
   }
 ];
